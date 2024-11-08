@@ -32,7 +32,7 @@ namespace Tyuiu.KhudoiberdievDB.Sprint4.Task0.V23
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                                   *");
             Console.WriteLine("********************************************************************************");
             Console.WriteLine(" Произведение нечетных элементов массива = " +ds.GetMultOddArrEl(num1));
-            Console.ReadKey();
+            Console.ReadKey(); 
         }
     }
 }
