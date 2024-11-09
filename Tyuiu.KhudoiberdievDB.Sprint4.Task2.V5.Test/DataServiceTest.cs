@@ -1,5 +1,5 @@
 using Tyuiu.KhudoiberdievDB.Sprint4.Task2.V5.Lib;
-namespace Tyuiu.KhudoiberdievDB.Sprint4.Task1.V9.Test
+namespace Tyuiu.KhudoiberdievDB.Sprint4.Task2.V5.Test
 {
     [TestClass]
     public class DataServiceTest
