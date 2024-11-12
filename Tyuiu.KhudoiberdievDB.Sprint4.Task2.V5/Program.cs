@@ -42,7 +42,7 @@ namespace Tyuiu.KhudoiberdievDB.Sprint4.Task2.V5
             Console.WriteLine(" Произведение четных элементов массива = " + ds.Calculate(num));
             Console.ReadKey();
 
-
+            
         }
     }
 }
