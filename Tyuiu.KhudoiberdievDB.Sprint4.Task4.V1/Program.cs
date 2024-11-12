@@ -45,7 +45,10 @@ namespace Tyuiu.KhudoiberdievDB.Sprint4.Task4.V1
                 {
                     Console.Write($"{NUM[i,j]}  \t");
                 }
-            }Console.WriteLine();
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+            
             Console.WriteLine("********************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                                   *");
             Console.WriteLine("********************************************************************************");
