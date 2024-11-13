@@ -1,39 +1,61 @@
-﻿using Tyuiu.KhudoiberdievDB.Sprint4.Task6.V11.Lib;
-namespace Tyuiu.KhudoiberdievDB.Sprint4.Task6.V11
+﻿using System;
+using Tyuiu.KhudoiberdievDB.Sprint4.Task7.V26.Lib;
+namespace Tyuiu.KhudoiberdievDB.Sprint4.Task7.V26
 {
     internal class Program
     {
         static void Main(string[] args)
-        
-        
-       { 
+        {
             DataService ds = new DataService();
             Console.Title = "Спринт #4 | Выполнил: Худойбердиев Д. Б. | ИСПБ 24-1";
             Console.WriteLine("********************************************************************************");
             Console.WriteLine("* Спринт #4                                                                    *");
             Console.WriteLine("* Тема: Базовые навыки работы в C#                                             *");
-            Console.WriteLine("* Задание #6                                                                   *");
-            Console.WriteLine("* Вариант #11                                                                    *");
+            Console.WriteLine("* Задание #7                                                                   *");
+            Console.WriteLine("* Вариант #26                                                                  *");
             Console.WriteLine("* Выполнил: Худойбердиев Далер Бахритдинович | ИСПБ 24-1                       *");
             Console.WriteLine("********************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                     *");
-            Console.WriteLine("* Дан строковый массив данных  используя класс Array подсчитайте количество    *");
-            Console.WriteLine("* элементов, длина которых равна 5                                             *");
+            Console.WriteLine("* Дана строка из одноразрядных цифр \"351268459614723\". Преобразуйте ее в     *");
+            Console.WriteLine("* матрицу 5 на 3 и подсчитайте произведение четных чисел.                      *");
+            Console.WriteLine("********************************************************************************");
             Console.WriteLine("********************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                             *");
             Console.WriteLine("********************************************************************************");
-            Console.WriteLine("Массив :");
-            string[] anim = { "Кошка", "Собака", "Слон", "Жираф", "Бегемот", "Игуана", "Ягуар" };
-            for (int i = 0; i < anim.Length; i++)
+            string value = "351268459614723";
+            int n = 5;
+            int m = 3;
+            int[,] nums = new int[n, m];
+            Console.WriteLine(" Массив :");
+            int index = 0;
+
+            for (int i = 0; i < n; i++)
             {
-                Console.Write($"{anim[i]} ");
+                for (int j = 0; j < m; j++)
+                {
+                    nums[i, j] = int.Parse(value.Substring(index, 1));
+                    index++;
+                }
             }
-            Console.WriteLine();
+
+
+
+
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    Console.Write($"{nums[i,j]} \t");
+                }
+                Console.WriteLine();
+            }
             Console.WriteLine("********************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                                   *");
             Console.WriteLine("********************************************************************************");
-            Console.WriteLine("количество элементов, длина которых равна 5 : " +ds.Calculate(anim));
+            Console.WriteLine("Произведение четных чисел = " +ds.Calculate(n,m,value));
             Console.ReadKey();
+
         }
     }
 }
